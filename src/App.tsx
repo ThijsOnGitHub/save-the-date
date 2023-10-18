@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './components/ui/card'
 import { Button } from './components/ui/button'
 import './style/globals.css'
@@ -7,7 +6,7 @@ import { CenterContainer } from './components/centerContainer'
 import { CalendarDays } from 'lucide-react'
 import { Separator } from './components/ui/separator'
 import { DateItem } from './components/DateItem'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './components/ui/dropdown-menu'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './components/ui/dropdown-menu'
 import { downloadIcsFile } from './functions/downloadICSFile'
 import { AgendaItemsToIcal } from './functions/AgendaItemsToIcal'
 import { OpenItemInGoogleCalendar } from './functions/OpenItemInGoogleCalendar'
@@ -31,20 +30,7 @@ function App() {
    
     console.error(e)
   }
-  
-  const itemsTest: AgendaItem[] = [
-    {
-      date: new Date(2021, 8, 1, 19, 0),
-      name: 'Kerdienst',
-      length: {hours: 1, minutes: 30}
-    },
-    {
-      date: new Date(),
-      name: 'Vergadering',
-      length: {hours: 1, minutes: 30}
-    }
-  ]
-  const text = JSON.stringify(itemsTest)
+
 
 
   function downloadAllItems(){

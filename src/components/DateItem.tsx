@@ -1,4 +1,4 @@
-import { CalendarDays, CalendarPlus } from "lucide-react";
+import {  CalendarPlus } from "lucide-react";
 import { Button } from "./ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
@@ -10,7 +10,7 @@ export interface DateItemProps{
     showAddButton?: boolean;
 }
 
-export const DateItem: React.FC<DateItemProps> = ({date,itemName, onAddClick, showAddButton,length}) => {
+export const DateItem: React.FC<DateItemProps> = ({date,itemName, onAddClick,length}) => {
     return (
         <div className="space-y-8">
         <div className="flex items-b items-center justify-between">
