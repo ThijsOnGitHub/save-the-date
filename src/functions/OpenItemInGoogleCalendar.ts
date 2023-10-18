@@ -6,6 +6,6 @@ export function OpenItemInGoogleCalendar(agendaItem: AgendaItem){
     const title = agendaItem.name;
     const description = "";
     const location = "";
-    const url = `https://calendar.google.com/calendar/r/eventedit?text=${title}&dates=${startTime}/${endTime}&details=${description}&location=${location}`;
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startTime}/${endTime}&details=${description}&location=${location}`;
     window.open(url, '_blank');
 }
